@@ -1,11 +1,16 @@
 export default class Alert {
-    constructor(slertId) {
-        this.alert = document.getElementById('alert');
+    constructor(alertId) {
+        this.alert = document.getElementById(alertId);
     }
 
     show(message) {
         this.alert.classList.remove('d-none');
         this.alert.innerText = message;
+
+        // Ocultar la alerta después de 2.5 segundos
+        setTimeout(() => {
+            this.hide();
+        }, 2500);
     }
 
     hide() {
