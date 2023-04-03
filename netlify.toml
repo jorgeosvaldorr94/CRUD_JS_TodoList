@@ -1,2 +1,11 @@
 [build]
-  publish = "D:\\Work\\Programacion WEB\\CRUD_JS_TodoList\\CRUD_JS_TodoList"
+  command = "echo 'No se requiere comando de construcción'"
+  publish = "."
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/js/*"
+  to = "/js/:splat"
+  status = 200
